@@ -1,0 +1,120 @@
+*,*::after,*::before{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: hsl(0, 0%, 98%);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+}
+.container{
+    color: hsl(234, 12%, 34%);
+}
+.title{
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.title :nth-child(1){
+    font-weight: 200;
+    /* color:  hsl(229, 6%, 66%); */
+    font-size: 2em;
+}
+.title :nth-child(2){
+    font-weight: 600;
+    font-size: 2em;
+}
+.para{
+    margin: auto;
+    text-align: center;
+    width:40%;
+    font-size: 0.8em;
+    color:  hsl(229, 6%, 66%);
+}
+.cards{
+    margin: auto;
+    height:500px;
+    width: 90%;
+    display: grid;
+    grid-template-columns:1fr 0.5fr 0.5fr 1fr;
+    grid-template-rows:1fr 0.5fr 0.5fr 1fr;
+    gap:20px;
+    justify-items: center;
+    align-items: center;
+}
+.card{
+    color: hsl(229, 6%, 66%);
+    width: 100%;
+    background-color: white;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 10px 15px hsl(212, 100%, 82%);
+}
+.card:hover{
+    transform: scale(1.07);
+}
+.card1{
+    grid-area:2/1/4/2;
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+.card2{
+    grid-area:2/2/3/4;
+    border-top:4px solid hsl(0, 78%, 62%);
+}
+.card3{
+    grid-area:3/2/4/4;
+    border-top:4px solid hsl(34, 97%, 64%)
+}
+.card4{
+    grid-area:2/4/4/5;
+    border-top:4px solid hsl(212, 86%, 64%);
+}
+.card div{
+    height: 50%;
+}
+.card div :nth-child(1){
+    color: hsl(234, 12%, 34%);
+    width: 80%;
+    margin: auto;
+    font-weight: 600;
+    font-size:20px;
+    display: block;
+}
+.card div :nth-child(2){
+    font-size:12px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    font-weight: 200;
+    color: hsl(229, 6%, 66%);
+}
+.card img{
+    display: flex;
+    margin-left: auto;
+    position: relative;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    top:20px;
+}
+@media screen and (max-width:800px){
+    .cards{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+    .card-1{
+        grid-area:;
+    }
+}
